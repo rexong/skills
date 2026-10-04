@@ -4,6 +4,8 @@ A portable collection of agent skills. Each subdirectory contains a `SKILL.md` a
 
 - `find-skills/` — sourced from [vercel-labs/skills](https://github.com/vercel-labs/skills) (the locally installed copy).
 - `skill-creator/` — sourced from [anthropics/skills](https://github.com/anthropics/skills), including its supporting scripts and resources.
+- `constitution/` — establish a project's mission, tech stack, and small-phased roadmap.
+- `feature-spec/` — plan the next numbered roadmap phase in a dated feature directory and branch.
 
 ## Set up on a new environment
 
@@ -22,7 +24,7 @@ A portable collection of agent skills. Each subdirectory contains a `SKILL.md` a
 
    This creates links in `~/.agents/skills/`, which Pi discovers globally. It does not replace existing skills; if one already exists there, move it aside and rerun the script if you want this repo's version. Keep the cloned repository in place while using the links.
 
-3. Start a new Pi session, or run `/reload` in an existing one. You can invoke a skill explicitly with `/skill:find-skills` or `/skill:skill-creator`.
+3. Start a new Pi session, or run `/reload` in an existing one. You can invoke a skill explicitly with `/skill:find-skills`, `/skill:skill-creator`, `/skill:constitution`, or `/skill:feature-spec`.
 
 To add another skill later, put its complete directory (including `SKILL.md` and any bundled files) in this repo, commit and push it, then `git pull` and rerun `bash install.sh` on other environments. Existing links will pick up edits automatically.
 
